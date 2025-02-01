@@ -20,7 +20,7 @@ ARG jupyterlab_version
 ARG sparksql_magic_version
 ARG kafka_python_version
 
-RUN pip3 install --no-cache-dir wget==3.2 \
+RUN pip3 install --no-cache-dir wget==3.2 --break-system-packages \
     pyspark==${spark_version} \
     jupyterlab==${jupyterlab_version} \
     sparksql-magic==${sparksql_magic_version} \
